@@ -1,0 +1,39 @@
+<div class = "container-fluid">
+	<div class="page-header">
+		<h1>Boshen Cui</h1>
+
+		<h2> CS/BBA Student, Developer in Training, Data Enthusiast</h2>
+
+		<%= image_tag("profile_pic_with_bg.png", id: "profile_pic", class: "img-circle") %>
+	</div>
+
+	<div class="row">
+	  <div class="col-sm-4" id="Experience">
+	  	<h2>Work Experience</h2>
+
+	  </div>
+
+	  <div class="col-sm-4" id="Projects">
+	  	<h2>Side Projects</h2>
+
+	  </div>
+
+	  <div class="col-sm-4" id="Languages">
+	  	<h2>Languages and Frameworks</h2>
+
+	  </div>
+	</div>
+
+	<div id="resume">
+		Want to know more? Check out my <%= link_to "resume", 'resume' %>!
+	</div>
+
+	<div id="contact">
+		<%= render :template =>'pages/contact' %>
+	</div>
+
+
+</div>
+
+
+
