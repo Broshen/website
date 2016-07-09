@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p> 
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+<h5>Front End</h5>
+
+<% @skills.where(skilltype: "front end").find_each do |skill| %>
+  <div data-toggle="tooltip" title='<%= skill.description %>' data-placement="auto bottom">
+    <%= skill.title %>
+    
+    <% skill.proficiency.times do %>
+      <span class= 'glyphicon glyphicon-star'></span>
+    <% end %>
+
+    <% (5-skill.proficiency).times do %>
+      <span class= 'glyphicon glyphicon-star-empty'></span>
+    <% end %>
+    <br>
+
+    <br>
+<!--       <td><%= link_to 'Show', skill %></td>
+    <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
+    <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+  </div>
+<% end %>
+ 
+
+<br>
+
+<!--<%= link_to 'New Skill', new_skill_path %>-->

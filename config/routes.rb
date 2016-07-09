@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :skills
   get 'home', to: 'pages#home'
 
   get 'experience', to: 'pages#experience'
