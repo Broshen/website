@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+
+  resources :experiences
+  resources :projects
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   resources :skills
+
   get 'home', to: 'pages#home'
 
-  get 'experience', to: 'pages#experience'
+  get 'experience', to: 'experiences#index'
 
   get 'projects', to: 'pages#projects'
 
