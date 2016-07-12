@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
   resources :experiences
+
   resources :projects
+
+  resources :users
+
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
 
   resources :skills
 
   get 'home', to: 'pages#home'
-
+  
   get 'experience', to: 'experiences#index'
 
   get 'projects', to: 'pages#projects'
@@ -15,6 +21,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   get 'resume' => redirect("http://boshencui.com/resume.pdf")
+
+  get  '/signup',  to: 'users#new'
+  post '/signup',  to: 'users#create'
 
   root 'pages#home'
 
