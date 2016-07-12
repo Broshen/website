@@ -12,18 +12,21 @@ Rails.application.routes.draw do
 
   resources :skills
 
+  # header routes
   get 'home', to: 'pages#home'
-  
   get 'experience', to: 'experiences#index'
-
-  get 'projects', to: 'pages#projects'
-
+  get 'projects', to: 'projects#index'
   get 'contact', to: 'pages#contact'
-
   get 'resume' => redirect("http://boshencui.com/resume.pdf")
 
+  # sign up routes
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
+
+  # login routes
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
   root 'pages#home'
 
