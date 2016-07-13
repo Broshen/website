@@ -21,7 +21,7 @@
         <td><%= project.description %></td>
         <td><%= project.github %></td>
 
-        <% if logged_in? %>
+        <% if is_admin? %>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,4 +33,6 @@
 
 <br>
 
+<% if is_admin? %>
 <%= link_to 'New Project', new_project_path %>
+<% end %>

@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 });
 </script>
+
 <h5>Front End</h5>
 
 <% @skills.where(skilltype: "front end").find_each do |skill| %>
@@ -21,11 +22,12 @@ $(document).ready(function(){
 
     <br>
 
-    <% if logged_in? %>
+    <% if is_admin? %>
     <td><%= link_to 'Show', skill %></td>
     <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
     <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
     <% end %>
+
 
   </div>
 <% end %>
@@ -33,4 +35,6 @@ $(document).ready(function(){
 
 <br>
 
-<!--<%= link_to 'New Skill', new_skill_path %>-->
+<% if is_admin? %>
+<%= link_to 'New Skill', new_skill_path %>
+<% end %>

@@ -20,5 +20,7 @@
   <%= @experience.description %>
 </p>
 
+<% if is_admin? %>
 <%= link_to 'Edit', edit_experience_path(@experience) %> |
 <%= link_to 'Back', experiences_path %>
+<% end %>

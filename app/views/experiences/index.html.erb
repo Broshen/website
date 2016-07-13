@@ -20,9 +20,13 @@
         <td><%= experience.start %></td>
         <td><%= experience.end %></td>
         <td><%= experience.description %></td>
+
+        <% if is_admin? %>
         <td><%= link_to 'Show', experience %></td>
         <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
         <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +34,6 @@
 
 <br>
 
+<% if is_admin? %>
 <%= link_to 'New Experience', new_experience_path %>
+<% end %>

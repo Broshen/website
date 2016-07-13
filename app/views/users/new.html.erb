@@ -1,6 +1,8 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
+<h2>If you're not Boshen, congratulations on finding this page. I dunno why you're snooping around my website, but hey, do whatever you want. Go ahead. Create an account. You won't be able to do anything though. Hmph. </h2>
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user, url: signup_path) do |f| %>
@@ -17,7 +19,7 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+      <br>
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>

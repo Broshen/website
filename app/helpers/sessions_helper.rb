@@ -44,4 +44,22 @@ module SessionsHelper
     @current_user = nil
   end
 
+  # Confirms user is an admin
+  def is_admin
+
+  	@admin = User.find_by(id: 1)
+    unless logged_in? && current_user == @admin
+	      flash[:danger] = "I see you've found a page where I manage all my stuff. Clever girl. But not clever enough."
+	      redirect_to root_url
+	    
+	end
+
+  end
+
+  # Checks to see if user is an admin
+  def is_admin?
+  	@admin = User.find_by(id: 1)
+  	logged_in? && current_user == @admin
+  end
+
 end
