@@ -20,8 +20,11 @@
 
             <% if logged_in? %>
               <li>
-                <%= link_to "Log out", logout_path, method: "delete" %>
+                <%= link_to "Account", user_path(current_user)%>
               </li>
+             <li>
+                <%= link_to "Log out", logout_path, method: "delete" %>
+             </li>
             <% end %>
 
           </ul>

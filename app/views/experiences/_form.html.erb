@@ -17,15 +17,19 @@
   </div>
   <div class="field">
     <%= f.label :start %><br>
-    <%= f.month_field :start %>
+    <%= f.text_field :start %>
   </div>
   <div class="field">
     <%= f.label :end %><br>
-    <%= f.month_field :end %>
+    <%= f.text_field :end %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.bootsy_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :links %><br>
+    <%= f.bootsy_area :links %>
   </div>
   <div class="actions">
     <%= f.submit %>

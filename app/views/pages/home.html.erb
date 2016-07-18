@@ -7,19 +7,21 @@
 		<%= image_tag("profile_pic_with_bg.png", id: "profile_pic", class: "img-circle") %>
 	</div>
 
+
 	<div class="row">
 	  <div class="col-sm-4" id="Experience">
-	  	<h2>Work Experience</h2>
+	  	<h3>Work Experience</h3>
 
+	  	<%= render partial:'experiences/home_index' %>
 	  </div>
 
 	  <div class="col-sm-4" id="Projects">
-	  	<h2>Side Projects</h2>
+	  	<h3>Side Projects</h3>
 
 	  </div>
 
 	  <div class="col-sm-4" id="Languages">
-	  	<h2>Languages and Software</h2>
+	  	<h3>Languages and Software</h3>
 	  
 	  	<%= render template:'skills/index' %>
 	  </div>

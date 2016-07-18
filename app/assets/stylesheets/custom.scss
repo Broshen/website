@@ -37,9 +37,15 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.7em;
   text-align: center;
   font-weight: normal;
 }
@@ -106,6 +112,6 @@ footer .dropup{
 }
 
 textarea{
-  width: 25vw;
+  width: 50vw;
   height: 25vh;
 }

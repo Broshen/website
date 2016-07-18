@@ -1,0 +1,18 @@
+<% experience = show_short %>
+
+<h4> <%= experience.title %> </h4>
+
+<h5> 
+  <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>
+</h5>
+
+<p><%= experience.description.html_safe %></p>
+
+<br>
+
+<p><%= experience.links.html_safe %></p>
+
+<% if is_admin? %>
+  <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
+  <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>

@@ -1,37 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Experiences</h1>
+<h1>Work Experience</h1>
+<br>
+<% @experiences.order(:created_at).reverse_order.each do |experience| %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Start</th>
-      <th>End</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <br>
 
-  <tbody>
-    <% @experiences.each do |experience| %>
-      <tr>
-        <td><%= experience.title %></td>
-        <td><%= experience.start %></td>
-        <td><%= experience.end %></td>
-        <td><%= experience.description %></td>
+  <%= render :partial=>'experiences/show', :object=>experience %>   
 
-        <% if is_admin? %>
-        <td><%= link_to 'Show', experience %></td>
-        <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
-        <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+<% end %>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<br>
 <br>
 
 <% if is_admin? %>
