@@ -23,7 +23,7 @@ class ExperiencesController < ApplicationController
 
     respond_to do |format|
       if @experience.save
-        format.html { redirect_to 'experiences', notice: 'Experience was successfully created.' }
+        format.html { redirect_to '/experiences', notice: 'Experience was successfully created.' }
         format.json { render :index, status: :created, location: @experience }
       else
         format.html { render :new }
