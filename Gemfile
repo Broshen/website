@@ -27,9 +27,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Development and production server
 gem 'puma'
 
+# wysiwyg editor
 gem 'bootsy'
+
+# truncating html
+gem 'truncato'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
