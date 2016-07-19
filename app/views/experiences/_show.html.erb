@@ -1,8 +1,8 @@
 <% experience = show %>
 
- 
-
-<h4 class="anchor" id=<%= experience.title.delete(' ') %>> <%= experience.title %> </h4>
+<h4 class="anchor" id=<%= experience.title.delete(' ').downcase %>>
+ <%= experience.title %>
+</h4>
 
 <h5 > 
   <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>

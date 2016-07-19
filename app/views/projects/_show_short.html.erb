@@ -9,6 +9,7 @@
 
 <p>
 <%= project.description.html_safe %>
+<%= link_to '...Read more', 'projects#'+project.name.delete(' ').downcase %>
 </p>
 
 <p>
