@@ -112,6 +112,22 @@ footer .dropup{
 }
 
 textarea{
-  width: 50vw;
+  width: 90vw;
   height: 25vh;
+  resize: both !important;
+}
+
+.thumbnail{
+  margin: auto;
+  height: 150px;
+  overflow: hidden;
+  border: none;
+}
+
+.thumbnail img{
+  width: 100%;
+  height: auto;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
 }

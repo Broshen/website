@@ -1,0 +1,27 @@
+<% project = show_short %>
+
+<h4>
+<%= project.name %>
+</h4>
+<p class="thumbnail">
+<%= project.thumbnail.html_safe %>
+</p>
+
+<p>
+<%= project.description.html_safe %>
+</p>
+
+<p>
+<strong>Languages:</strong>
+<%= project.languages.html_safe %>
+</p>
+
+<p>
+<%= project.links.html_safe %>
+</p>
+
+
+<% if is_admin? %>
+<td><%= link_to 'Edit', edit_project_path(project) %></td>
+<td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>

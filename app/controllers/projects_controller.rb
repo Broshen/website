@@ -7,11 +7,6 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
-  # GET /projects/1
-  # GET /projects/1.json
-  def show
-  end
-
   # GET /projects/new
   def new
     @project = Project.new
@@ -28,8 +23,8 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
-        format.json { render :show, status: :created, location: @project }
+        format.html { redirect_to '/projects', notice: 'Project was successfully created.' }
+        format.json { render :index, status: :created, location: @project }
       else
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
@@ -42,8 +37,8 @@ class ProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @project.update(project_params)
-        format.html { redirect_to @project, notice: 'Project was successfully updated.' }
-        format.json { render :show, status: :ok, location: @project }
+        format.html { redirect_to '/projects', notice: 'Project was successfully updated.' }
+        format.json { render :index, status: :ok, location: @project }
       else
         format.html { render :edit }
         format.json { render json: @project.errors, status: :unprocessable_entity }
@@ -69,6 +64,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :languages, :description, :github, :bootsy_image_gallery_id)
+      params.require(:project).permit(:name, :languages, :description, :links, :thumbnail, :gallery, :bootsy_image_gallery_id)
     end
 end
