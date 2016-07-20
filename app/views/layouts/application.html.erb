@@ -4,7 +4,7 @@
   <title>Boshen Cui</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'application', "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" %>
+  <%= stylesheet_link_tag    'application', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
@@ -24,5 +24,10 @@
 
 <!--   <%= render 'layouts/footer' %> -->
   <br>
+
+  <script>
+  $(".alert" ).fadeOut(3000);
+  </script>
+  
 </body>
 </html>

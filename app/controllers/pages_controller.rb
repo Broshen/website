@@ -3,8 +3,10 @@ class PagesController < ApplicationController
   	@skills = Skill.all
   	@experiences = Experience.all
   	@projects = Project.all
+    @message = Message.new
   end
 
-  def contact
+  def contact  	
+    @message = Message.new
   end
 end

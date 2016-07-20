@@ -16,7 +16,10 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   get 'experience', to: 'experiences#index'
   get 'projects', to: 'projects#index'
+
   get 'contact', to: 'pages#contact'
+  post 'contact', to: 'messages#create'
+
   get 'resume' => redirect("http://boshencui.com/resume.pdf")
 
   # user routes

@@ -1,0 +1,26 @@
+<br>
+Email me at boshen.cui@gmail.com or use the following form:
+<br><br>
+<%= form_for @message, url: contact_path do |message_form| %>
+  <div class="form-group">
+    <fieldset>
+      <div class="col-sm-6 field">
+        <%= message_form.text_field :name, placeholder: "Name", class: "form-control" %>
+      </div>
+      
+      <div class="col-sm-6 field">
+        <%= message_form.email_field :email, placeholder: "Email", class: "form-control"%>
+      </div>
+      
+      <div class="col-sm-12 field">
+        <%= message_form.text_area :content, placeholder: "Message", class: "form-control", rows:"10"%>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <div class="col-sm-12 field">
+        <%= message_form.submit "Send", class: "btn btn-default" %>
+      </div>
+    </fieldset>
+  </div>
+<% end %>
