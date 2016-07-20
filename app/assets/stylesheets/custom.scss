@@ -78,34 +78,12 @@ header{
   text-decoration: none;
 }
 
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  color: #777;
-}
-
-footer .dropup{
-  float: right;
-
-  background-color: #asdf111;
-  bottom :100%;
-}
-
-.dropdown-menu-right{
-  float: left;
-}
-
 #profile_pic{
   max-width: 150px;
   display: block;
   margin: 0 auto;
 }
 
-.page-header{
- /* background: url("/assets/page_header.gif") no-repeat center rgba(0, 0, 0, 0.6); */
-}
 
 .tooltip{
   font-size: 15px
@@ -130,4 +108,19 @@ textarea{
   top: 50%;
   position: relative;
   transform: translateY(-50%);
+}
+
+.fa{
+  font-size:48px !important;
+  color: #000 !important;
+}
+
+.fa:hover{
+  text-decoration: none;
+  color:#666 !important;
+  background-color: white;
+}
+
+.center{
+  text-align: center;
 }
