@@ -19,5 +19,6 @@
 # Ignore puma config
 /config/puma.rb
 
-# Ignore email config
-.env
+
+# Ignore application configuration
+/config/application.yml
