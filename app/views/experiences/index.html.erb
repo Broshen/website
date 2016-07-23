@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Work Experience</h1>
 <br>
-<% @experiences.order(:created_at).reverse_order.each do |experience| %>
+<% @experiences.order(:created_at).each do |experience| %>
 
   <br>
 

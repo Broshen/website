@@ -7,14 +7,13 @@
 </h5>
 
 <p>
-	<%= (Truncato.truncate experience.description, max_length: 150, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
+	<%= (Truncato.truncate experience.description, max_length: 500, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
 	<br>
 	<%= link_to raw('<strong>See Full Description</strong>'), 'experiences#'+experience.title.delete(' ').downcase %>
 </p>
 
 <br>
-
-<p><%= experience.links.html_safe %></p>
+<br>
 
 <% if is_admin? %>
   <td><%= link_to 'Edit', edit_experience_path(experience) %></td>

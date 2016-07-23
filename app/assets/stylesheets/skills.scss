@@ -1,3 +1,32 @@
 // Place all the styles related to the Skills controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.right{
+	float: right;
+	text-align: right;
+}
+.left{
+	float: left;
+	text-align: left;
+}
+
+.skill{
+	margin: 0 auto;	
+	padding: 1 em;
+}
+
+.skill td, .skill tr{
+	border: none !important;
+}
+
+.fa-star, .fa-star-o {
+  font-size:inherit !important;
+  color: #000 !important;
+  pointer-events: none;
+}
+
+.subheading{
+  text-align: center;
+  padding-bottom: 10px;
+}
