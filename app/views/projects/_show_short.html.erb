@@ -1,11 +1,11 @@
 <% project = show_short %>
 
-<h4>
-<%= project.name %>
-</h4>
-<p class="thumbnail">
+<a href="projects#<%=project.name.delete(' ').downcase%>">
+	<h4><%= project.name %></h4>
+</a>
+<!-- <p class="thumbnail">
 <%= project.thumbnail.html_safe %>
-</p>
+</p> -->
 
 <p>
 	<%= (Truncato.truncate project.description, max_length: 150, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
@@ -15,10 +15,13 @@
 
 <p>
 <strong>Languages:</strong>
+<br>
 <%= project.languages.html_safe %>
 </p>
 
-<p>
+<p>	
+<strong>Links:</strong>
+<br>
 <%= project.links.html_safe %>
 </p>
 
@@ -27,3 +30,5 @@
 <td><%= link_to 'Edit', edit_project_path(project) %></td>
 <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <% end %>
+
+<br>

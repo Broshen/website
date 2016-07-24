@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* color palette:
+
+dark-green: #5c8a2d
+light-green: #afd687
+light-blue: #00c3a9
+dark-blue: #008798
+
+*/
+
 /* universal */
 
 body {
@@ -11,16 +20,22 @@ section {
   overflow: auto;
 }
 
-textarea {
-  resize: vertical;
-}
-
 .center {
   text-align: center;
 }
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+.right{
+  float: right !important;
+  text-align: right !important;
+}
+
+.left{
+  float: left !important;
+  text-align: left !important;
 }
 
 /* typography */
@@ -69,24 +84,16 @@ header{
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  padding: 15px;
+}
+.navbar-header{
+    vertical-align: middle;
+    margin: 0 auto;
 }
 
 #logo:hover {
   color: #fff;
   text-decoration: none;
-}
-
-#profile_pic{
-  max-width: 150px;
-  display: block;
-  margin: 0 auto;
-}
-
-
-.tooltip{
-  font-size: 15px
 }
 
 textarea{
@@ -95,32 +102,13 @@ textarea{
   resize: both !important;
 }
 
-.thumbnail{
-  margin: auto;
-  height: 150px;
-  overflow: hidden;
-  border: none;
-}
-
-.thumbnail img{
-  width: 100%;
-  height: auto;
-  top: 50%;
-  position: relative;
-  transform: translateY(-50%);
-}
-
-.fa {
-  font-size:48px !important;
-  color: #000 !important;
-}
-
-.fa:hover{
-  text-decoration: none;
-  color:#666 !important;
+.container{
   background-color: white;
 }
 
-.center{
-  text-align: center;
+.anchor{
+  display: block;
+  height: 50px; /*same height as header*/
+  margin-top: -50px; /*same height as header*/
+  visibility: hidden;
 }

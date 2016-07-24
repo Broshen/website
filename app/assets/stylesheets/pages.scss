@@ -1,3 +1,86 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#profile_pic{
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.tooltip{
+  font-size: 15px
+}
+
+.thumbnail{
+  margin: auto;
+  height: 150px;
+  overflow: hidden;
+  border: none;
+}
+
+.thumbnail img{
+  width: 100%;
+  height: auto;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+.fa {
+  font-size:48px !important;
+  color: #000 !important;
+}
+
+.fa:hover{
+  text-decoration: none;
+  color:#666 !important;
+  background-color: white;
+}
+
+.nav-tabs h3{
+	color: gray;
+}
+
+.active h3{
+	color: black;
+}
+
+#about{
+	width: 90%;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px){
+	.col.col-sm-8{
+		border-right: solid 1px #eeeeee;
+	}
+
+	#left-title{
+		height: 100%;
+		border-right: solid 1px #eeeeee;
+	}
+
+
+}
+
+@media(max-width: 768px){
+	#left-title{
+		border-bottom: solid 1px #eeeeee;
+	}
+
+	#Skills{
+		border-top: solid 1px #eeeeee;
+		position: relative !important;
+	}
+}
+
+#about-pic{
+	max-width: 100%;
+	height: auto;
+	padding: 0;
+}
+
+.hidden{
+	display: none;
+}	

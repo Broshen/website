@@ -1,43 +1,60 @@
-<div class = "container-fluid">
-	<div class="page-header">
-		<h1>Boshen Cui</h1>
+<div class="page-header">
+	<h1>Boshen Cui</h1>
 
-		<h2> CS/BBA Student, Developer in Training, Data Enthusiast</h2>
+	<h2> CS/BBA Student, Developer in Training, Data Enthusiast</h2>
 
-		<%= image_tag("profile_pic_with_bg.png", id: "profile_pic", class: "img-circle") %>
+	<%= image_tag("profile_pic_with_bg.png", id: "profile_pic", class: "img-circle") %>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<%= render partial: 'pages/about' %>
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	<div class="col col-sm-8">
+		<ul class="nav nav-tabs nav-justified">
+			<li  id="left-title"> <h3 data-toggle="tab" href="#Experience">Work Experience</h3> </li>
+			<li class="active"> <h3 data-toggle="tab" href="#Projects">Side Projects</h3> </li>
+		</ul>
+	
+
+		<div class="tab-content">
+		  <div id="Experience" class="tab-pane fade">
+		  	
+		  	<%= render partial:'experiences/home_index' %>
+		  </div>
+	
+		  <div id="Projects" class="tab-pane fade in active">
+		  	
+	     	 <%= render :partial=>'projects/home_index' %>
+		  </div>
+	
+		</div>
 	</div>
 
-
-	<div class="row">
-	  <div class="col-sm-4" id="Experience">
-	  	<h3>Work Experience</h3>
-
-	  	<%= render partial:'experiences/home_index' %>
-	  </div>
-
-	  <div class="col-sm-4" id="Projects">
-	  	<h3>Side Projects</h3>
-
-     	 <%= render :partial=>'projects/home_index' %>
-         
-
-	  </div>
-
-	  <div class="col-sm-4" id="Languages">
-	  	<h3>Languages and Software</h3>
+  <div class="col col-sm-4">
+  	<div id="Skills">
+	  	<h3>Skills</h3>
 	  
 	  	<%= render partial:'skills/index' %>
 	  </div>
-	</div>
-
-	<hr>
-
-	<div id="contact">
-		<%= render :template =>'pages/contact' %>
-	</div>
-
-
+  </div>
 </div>
 
+<hr>
 
+<div id="contact">
+	<%= render :template =>'pages/contact' %>
+</div>
 
+<!-- 
+<script>
+$(document).ready(function(){
+    /* affix the navbar after scroll below header */
+    $("#Skills").affix({offset: {top: $("#Experience").outerHeight(true)} });
+});
+</script> -->

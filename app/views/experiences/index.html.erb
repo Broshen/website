@@ -1,14 +1,11 @@
 <h1>Work Experience</h1>
-<br>
-<% @experiences.order(:created_at).each do |experience| %>
 
-  <br>
+<% @experiences.order(:created_at).each do |experience| %>
 
   <%= render :partial=>'experiences/show', :object=>experience %>   
 
 <% end %>
 
-<br>
 <br>
 
 <% if is_admin? %>

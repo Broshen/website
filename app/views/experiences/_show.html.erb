@@ -1,6 +1,7 @@
 <% experience = show %>
 
-<h4 class="anchor" id=<%= experience.title.delete(' ').downcase %>>
+<span class="anchor" id=<%= experience.title.delete(' ').downcase %>></span>
+<h4>
  <%= experience.title %>
 </h4>
 
@@ -14,9 +15,10 @@
 
 <p><%= experience.links.html_safe %></p>
 
-<br>
 
 <% if is_admin? %>
   <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
   <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <% end %>
+<br>
+<br>

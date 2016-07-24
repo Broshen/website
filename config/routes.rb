@@ -14,6 +14,9 @@ Rails.application.routes.draw do
 
   # header routes
   get 'home', to: 'pages#home'
+
+
+  get 'about', to: 'pages#about'
   get 'experience', to: 'experiences#index'
   get 'projects', to: 'projects#index'
 
