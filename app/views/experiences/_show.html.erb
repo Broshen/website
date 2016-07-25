@@ -1,9 +1,7 @@
 <% experience = show %>
 
 <span class="anchor" id=<%= experience.title.delete(' ').downcase %>></span>
-<h4>
- <%= experience.title %>
-</h4>
+<h3 class="left"><%= experience.title %></h3>
 
 <h5 > 
   <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>
@@ -13,6 +11,7 @@
 
 <br>
 
+<strong>Links:</strong>
 <p><%= experience.links.html_safe %></p>
 
 

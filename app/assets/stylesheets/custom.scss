@@ -29,12 +29,10 @@ section {
 }
 
 .right{
-  float: right !important;
   text-align: right !important;
 }
 
 .left{
-  float: left !important;
   text-align: left !important;
 }
 
@@ -46,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
+  font-family: 'Open Sans';
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -53,6 +52,7 @@ h1 {
 
 h2 {
   font-size: 2em;
+  font-family: 'Open Sans';
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -61,6 +61,7 @@ h2 {
 
 h3 {
   font-size: 1.7em;
+  font-family: 'Open Sans';
   text-align: center;
   font-weight: normal;
 }
@@ -78,6 +79,7 @@ header{
 }
 
 #logo {
+  font-family: 'Open Sans';
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -102,8 +104,16 @@ textarea{
   resize: both !important;
 }
 
-.container{
+.field > textarea{
+  width: 80vw;
+  height: 100vh;
+  resize: both !important;
+}
+
+.container, .container-fluid{
   background-color: white;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .anchor{

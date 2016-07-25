@@ -5,11 +5,13 @@
 
 .skill{
 	margin: 0 auto;	
-	padding: 1 em;
+	min-width: 250px;
 }
 
 .skill td, .skill tr{
 	border: none !important;
+	overflow:hidden; 
+	white-space:nowrap;
 }
 
 .fa-star, .fa-star-o {

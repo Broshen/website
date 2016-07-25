@@ -6,7 +6,7 @@ $(document).ready(function(){
 </script>
 
 <h4 class="subheading">Languages</h4>
-<table class="table-condensed skill">
+<table class="skill">
   <tbody>
     <% @skills.order(proficiency: :desc, title: :asc).where(skilltype: "languages").each do |skill| %>
 
