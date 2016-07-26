@@ -43,7 +43,7 @@ module Website
       config.ftp_port = 21
       config.ftp_user = "boshenftp@boshencui.com"
       config.ftp_passwd = ENV["FTP_PASSWORD"]
-      config.ftp_folder = ""
+      config.ftp_folder = "/public/uploads"
       config.ftp_url = "https://www.boshencui.com"
       config.ftp_passive = false # false by default
     end
