@@ -39,13 +39,17 @@ module Website
     }
 
     CarrierWave.configure do |config|
-      config.ftp_host = "ftp.boshencui.com"
-      config.ftp_port = 21
-      config.ftp_user = "boshenftp@boshencui.com"
-      config.ftp_passwd = ENV["FTP_PASSWORD"]
-      config.ftp_folder = "/public/uploads"
-      config.ftp_url = "ftp.boshencui.com/uploads"
-      config.ftp_passive = false # false by default
+        config.storage    = :aws
+        config.aws_bucket = 'bootsyuploads'
+        config.aws_acl    = 'public-read'
+
+      config.aws_credentials = {                     # required
+        access_key_id:     ENV["ACCESS_KEY"],                        # required
+        secret_access_key: ENV["SECRET_KEY"],                        # required
+        region:                'us-east-1'                # optional, defaults to 'us-east-1'
+      }
+                                   # optional, defaults to true
+ 
     end
 
   end
