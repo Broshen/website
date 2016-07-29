@@ -41,7 +41,7 @@ gem 'figaro'
 
 # uploads storage
 gem "carrierwave"
-gem "fog"
+gem "carrierwave-aws"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
