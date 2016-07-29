@@ -41,6 +41,9 @@ gem 'figaro'
 
 # uploads storage
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp' # FTP only
+gem "carrierwave"
+gem "fog"
+gem "fog-aws"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
