@@ -43,14 +43,12 @@ module Website
         config.aws_bucket = 'bootsyuploads'
         config.aws_acl    = 'public-read'
 
-      config.fog_credentials = {                     # required
+      config.aws_credentials = {                     # required
         access_key_id:     ENV["ACCESS_KEY"],                        # required
         secret_access_key: ENV["SECRET_KEY"],                        # required
-        region:                'us-east-1',                  # optional, defaults to 'us-east-1'
- 
+        region:                'us-east-1'                # optional, defaults to 'us-east-1'
       }
-      config.fog_directory  = 'bootsyuploads'                          # required
-      config.fog_public     = false                                        # optional, defaults to true
+                                   # optional, defaults to true
  
     end
 
