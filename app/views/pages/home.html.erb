@@ -7,54 +7,40 @@
 </div>
 
 <div class="row">
-	<div class="col-sm-12">
 		<%= render partial: 'pages/about' %>
-	</div>
+
+	<hr>	
+
 </div>
 
-<hr>
 
 <div class="row">
-	<div class="col col-sm-8">
-		<ul class="nav nav-tabs nav-justified">
-			<li  id="left-title"> <h3 data-toggle="tab" href="#Experience">Work Experience</h3> </li>
-			<li class="active"> <h3 data-toggle="tab" href="#Projects">Side Projects</h3> </li>
-		</ul>
-	
+	<h2>Work Experience</h2> 
 
-		<div class="tab-content">
-		  <div id="Experience" class="tab-pane fade">
-		  	
-		  	<%= render partial:'experiences/home_index' %>
-		  </div>
+		
+	<%= render partial:'experiences/home_index' %>
+
+	<hr>
+
+</div>	
+<div class="row">
+	<h2>Side Projects</h2> 
+	<%= render :partial=>'projects/home_index' %>
+</div>
 	
-		  <div id="Projects" class="tab-pane fade in active">
-		  	
-	     	 <%= render :partial=>'projects/home_index' %>
-		  </div>
-	
-		</div>
+<div class="row">
+	<hr>	
+
+	<h2>Skills</h2>
+	  
+	<%= render partial:'skills/index' %>
+</div>
+
+	<hr>
+
+	<div id="contact">
+		<%= render :template =>'pages/contact' %>
 	</div>
 
-  <div class="col col-sm-4">
-  	<div id="Skills">
-	  	<h3>Skills</h3>
-	  
-	  	<%= render partial:'skills/index' %>
-	  </div>
-  </div>
-</div>
 
-<hr>
 
-<div id="contact">
-	<%= render :template =>'pages/contact' %>
-</div>
-
-<!-- 
-<script>
-$(document).ready(function(){
-    /* affix the navbar after scroll below header */
-    $("#Skills").affix({offset: {top: $("#Experience").outerHeight(true)} });
-});
-</script> -->
