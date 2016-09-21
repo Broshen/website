@@ -122,3 +122,7 @@ textarea{
   margin-top: -50px; /*same height as header*/
   visibility: hidden;
 }
+
+.project-thumbnail img{
+  max-height: 300px;
+}
