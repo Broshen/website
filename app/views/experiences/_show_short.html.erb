@@ -1,22 +1,36 @@
 <% experience = show_short %>
 
-<a href="/experiences#<%= experience.title.delete(' ').downcase%>"> 
-	<h4><%= experience.title %> </h4>
-</a>
-<h5> 
-  <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>
-</h5>
+<div class="row">
+	<div class="col col-sm-6">
+		<a href="/experiences#<%= experience.title.delete(' ').downcase%>"> 
+			<h4><%= experience.title %> </h4>
+		</a>
+		<h5> 
+		  <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>
+		</h5>
+	</div>
+	<div class="col col-sm-6 job-thumbnail">
+		<%= experience.thumbnail.html_safe %>
+	</div>
+</div>
 
-<p>
-	<%= (Truncato.truncate experience.description, max_length: 500, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
-	<br>
-	<%= link_to raw('<strong>See Full Description</strong>'), 'experiences#'+experience.title.delete(' ').downcase %>
-</p>
+<div class="row">
+	<div class="col col-sm-12">
+		<p>
+			<%= (Truncato.truncate experience.description, max_length: 500, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
+			<br>
+			<%= link_to raw('See Full Description'), 'experiences#'+experience.title.delete(' ').downcase %>
+		</p>
+
+		<br>
+		<br>
+
+<!-- 
+		<% if is_admin? %>
+		  <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
+		  <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<% end %> -->
+	</div>
+</div>
 
 <br>
-<br>
-
-<% if is_admin? %>
-  <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
-  <td><%= link_to 'Destroy', experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<% end %>

@@ -124,5 +124,16 @@ textarea{
 }
 
 .project-thumbnail img{
-  max-height: 300px;
+  max-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-thumbnail img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

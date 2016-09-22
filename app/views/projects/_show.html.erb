@@ -1,14 +1,14 @@
 <% project = show %>
 
 <span class="anchor" id=<%= project.name.delete(' ').downcase %> %>></span>
-<h3 class="left">
+<h2 class="center">
 <%= project.name %>
 </h3>
 
 <p>
 <%= project.description.html_safe %>
 </p>
-
+<br>
 <p>
 <strong>Gallery:</strong>
 </p>
@@ -16,10 +16,15 @@
 <%= project.gallery.html_safe %>
 </div>
 
+<br>
+
+<br>
 <p>
 <strong>Languages:</strong>
 <br>
 <%= project.languages.html_safe %>
+<br>
+
 <br>
 <strong>Links:</strong>
 <br>

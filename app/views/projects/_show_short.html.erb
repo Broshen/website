@@ -1,32 +1,27 @@
 <% project = show_short %>
 <div class='row'>
 <div class="col col-sm-8">
-	<div class="fuckthisshit">
-		<a href="projects#<%=project.name.delete(' ').downcase%>">
-			<h4><%= project.name %></h4>
-		</a>
-		<!-- <p class="thumbnail">
-		<%= project.thumbnail.html_safe %>
-		</p> -->
+	<a href="projects#<%=project.name.delete(' ').downcase%>">
+		<h4><%= project.name %></h4>
+	</a>
 
-		<p>
-			<%= (Truncato.truncate project.description, max_length: 150, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
-			<br>
-			<%= link_to raw('See Full Description'), 'projects#'+project.name.delete(' ').downcase %>
-		</p>
-
-		<p>
-		<strong>Languages:</strong>
+	<p>
+		<%= (Truncato.truncate project.description, max_length: 150, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
 		<br>
-		<%= project.languages.html_safe %>
-		</p>
+		<%= link_to raw('See Full Description'), 'projects#'+project.name.delete(' ').downcase %>
+	</p>
 
-		<p>	
-		<strong>Links:</strong>
-		<br>
-		<%= project.links.html_safe %>
-		</p>
-	</div>
+	<p>
+	<strong>Languages:</strong>
+	<br>
+	<%= project.languages.html_safe %>
+	</p>
+
+	<p>	
+	<strong>Links:</strong>
+	<br>
+	<%= project.links.html_safe %>
+	</p>
 </div>
 
 <div class="col col-sm-4 project-thumbnail">
@@ -39,5 +34,5 @@
 <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <% end %> -->
 
-<br><br>
 </div>
+<br><br><br>
