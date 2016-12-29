@@ -3,11 +3,13 @@
 <span class="anchor" id=<%= experience.title.delete(' ').downcase %>></span>
 <h3 class="left"><%= experience.title %></h3>
 
-<h5 > 
+<h5> 
   <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>
 </h5>
 
-
+<h5> 
+<%= experience.location %>
+</h5>
 
 <p><%= experience.description.html_safe %></p>
 
