@@ -4,3 +4,7 @@
 	<%= render :partial=>'projects/show_short', :object=>project %>
    
 <% end %>
+
+<% if is_admin? %>
+<%= link_to 'New Project', new_project_path %>
+<% end %>
