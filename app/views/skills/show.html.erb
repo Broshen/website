@@ -11,16 +11,6 @@
   </strong>
 </p>
 
-<p>
-  <strong>Proficiency:</strong>
-  <%= @skill.proficiency %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @skill.description %>
-</p>
-
 <% if is_admin? %>
 <%= link_to 'Edit', edit_skill_path(@skill) %> |
 <%= link_to 'Back', skills_path %>
