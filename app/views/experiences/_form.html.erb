@@ -23,9 +23,17 @@
     <%= f.label :end %><br>
     <%= f.text_field :end %>
   </div>
-    <div class="field">
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.bootsy_area :location %>
+  </div>
+  <div class="field">
     <%= f.label :thumbnail %><br>
     <%= f.bootsy_area :thumbnail %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.bootsy_area :summary %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
