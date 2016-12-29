@@ -1,10 +1,13 @@
+<% @skills.select(:skilltype).distinct.pluck(:skilltype).each do |skilltype| %>
+
+
   <div class="col col-sm-12">
-  <h3 class="subheading">Languages</h3>
+  <h3 class="subheading"><%= skilltype %></h3>
 
 
-      <% len = @skills.where(skilltype: "languages").length %>
+      <% len = @skills.where(skilltype: skilltype).length %>
       <% colsize = 4 %>
-      <% @skills.order(title: :asc).where(skilltype: "languages").each_with_index do |skill, index| %>
+      <% @skills.order(title: :asc).where(skilltype: skilltype).each_with_index do |skill, index| %>
 
           <% if index%3 == 0 %>
             <div class="row">
@@ -17,6 +20,13 @@
 
           <div class="col col-sm-<%= colsize %> center skill">
             <%= skill.title %>
+            
+            
+           <% if is_admin? %>
+            <td><%= link_to 'Show', skill %></td>
+            <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
+            <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+            <% end %>
           </div>
 
           <% if index%3 == 2 %>
@@ -24,17 +34,11 @@
 
           <% end %>
 
-            
-           <% if is_admin? %>
-            <td><%= link_to 'Show', skill %></td>
-            <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
-            <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-            <% end %>
 
       <% end %>
 
 </div>
-  
+  <!-- 
 <br>
 
 <div class="col col-sm-12">
@@ -71,8 +75,9 @@
             <% end %>
 
       <% end %>
-</div>
+</div> -->
 
+<% end %>
 
 <br>
 

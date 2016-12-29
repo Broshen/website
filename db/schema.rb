@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229031958) do
+ActiveRecord::Schema.define(version: 20161229200455) do
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.integer  "bootsy_resource_id"
@@ -54,10 +54,8 @@ ActiveRecord::Schema.define(version: 20161229031958) do
 
   create_table "skills", force: :cascade do |t|
     t.string   "skilltype"
-    t.integer  "proficiency"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "title"
   end
 
