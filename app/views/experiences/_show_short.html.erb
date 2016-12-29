@@ -8,6 +8,10 @@
 		<h5> 
 		  <%= parse_date(experience.start) %> to <%= parse_date(experience.end) %>
 		</h5>
+		<h5> 
+		  <%= experience.location %>
+
+		</h5>
 	</div>
 	<div class="col col-sm-6 job-thumbnail">
 		<%= experience.thumbnail.html_safe %>
@@ -17,7 +21,7 @@
 <div class="row">
 	<div class="col col-sm-12">
 		<p>
-			<%= (Truncato.truncate experience.description, max_length: 500, count_tags: false, filtered_tags: ['img'], tail: "...").html_safe %>
+			<%= (experience.summary).html_safe %>
 			<br>
 			<%= link_to raw('See Full Description'), 'experiences#'+experience.title.delete(' ').downcase %>
 		</p>
