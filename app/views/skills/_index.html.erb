@@ -2,7 +2,7 @@
 
 
   <div class="col col-sm-12">
-  <h3 class="subheading"><%= skilltype %></h3>
+  <h3 class="subheading"><%= skilltype.titleize %></h3>
 
 
       <% len = @skills.where(skilltype: skilltype).length %>
@@ -20,7 +20,7 @@
 
           <div class="col col-sm-<%= colsize %> center skill">
             <%= skill.title %>
-            
+
             
            <% if is_admin? %>
             <td><%= link_to 'Show', skill %></td>
@@ -38,44 +38,6 @@
       <% end %>
 
 </div>
-  <!-- 
-<br>
-
-<div class="col col-sm-12">
-  <h3 class="subheading">Software</h3>
-
-      <% len = @skills.where(skilltype: "software").length %>
-      <% colsize = 4 %>
-      <% @skills.order(title: :asc).where(skilltype: "software").each_with_index do |skill, index| %>
-
-          <% if index%3 == 0 %>
-            <div class="row">
-          <% end %>
-
-          <% if len-index <= len%3
-              colsize = 12/(len%3)
-              end %>
-
-
-          <div class="col col-sm-<%= colsize %> center skill">
-            <%= skill.title %>
-          </div>
-
-          <% if index%3 == 2 || len-index==1 %>
-            </div>
-
-          <% end %>
-
-            
-            
-             <% if is_admin? %>
-            <td><%= link_to 'Show', skill %></td>
-            <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
-            <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-            <% end %>
-
-      <% end %>
-</div> -->
 
 <% end %>
 
