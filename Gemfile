@@ -31,7 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'puma'
 
 # wysiwyg editor
-gem 'bootsy'
+gem 'bootsy', '2.3'
 
 # truncating html
 gem 'truncato'
