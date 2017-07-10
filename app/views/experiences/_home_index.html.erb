@@ -1,5 +1,5 @@
 <br>
-<% @experiences.order(:created_at).each do |experience| %>
+<% @experiences.order(:updated_at).each do |experience| %>
   
 	<%= render :partial=>'experiences/show_short', :object=>experience %>
    
