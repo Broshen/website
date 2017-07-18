@@ -1,11 +1,6 @@
 class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
   before_action :is_admin, only: [:new, :edit, :create, :update, :destroy]
-  # GET /experiences
-  # GET /experiences.json
-  def index
-    @experiences = Experience.all
-  end
 
   # GET /experiences/new
   def new
@@ -23,7 +18,7 @@ class ExperiencesController < ApplicationController
 
     respond_to do |format|
       if @experience.save
-        format.html { redirect_to '/experiences', notice: 'Experience was successfully created.' }
+        format.html { redirect_to '/', notice: 'Experience was successfully created.' }
         format.json { render :index, status: :created, location: @experience }
       else
         format.html { render :new }
@@ -37,7 +32,7 @@ class ExperiencesController < ApplicationController
   def update
     respond_to do |format|
       if @experience.update(experience_params)
-        format.html { redirect_to '/experiences', notice: 'Experience was successfully updated.' }
+        format.html { redirect_to '/', notice: 'Experience was successfully updated.' }
         format.json { render :index, status: :ok, location: @experience }
       else
         format.html { render :edit }
@@ -51,7 +46,7 @@ class ExperiencesController < ApplicationController
   def destroy
     @experience.destroy
     respond_to do |format|
-      format.html { redirect_to experiences_url, notice: 'Experience was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'Experience was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

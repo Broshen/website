@@ -1,3 +1,29 @@
 // Place all the styles related to the experiences controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.job-thumbnail img{
+  max-width: 100%;
+  float: none;
+}
+.home .card{
+	padding: 10px;
+    transition: box-shadow .25s;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.home .card:hover{
+	cursor: pointer;
+	box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+	.job-thumbnail img{
+	  max-width: 100%;
+	  float: right;
+	}
+	.home #experience{
+		width: 80%;
+		margin: 0 auto;
+	}
+}

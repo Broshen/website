@@ -1,6 +1,6 @@
 <br>
-<% @experiences.order(:updated_at).each do |experience| %>
-  
-	<%= render :partial=>'experiences/show_short', :object=>experience %>
-   
-<% end %>
+<div class="row" id="experience">
+	<% @experiences.order(:updated_at).each do |experience| %>
+		<%= render :partial=>'experiences/show_short', :object=>experience %>
+	<% end %>
+</div>

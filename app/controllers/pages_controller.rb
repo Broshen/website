@@ -5,8 +5,4 @@ class PagesController < ApplicationController
   	@projects = Project.all
     @message = Message.new
   end
-
-  def contact  	
-    @message = Message.new
-  end
 end

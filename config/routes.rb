@@ -12,15 +12,6 @@ Rails.application.routes.draw do
 
   resources :skills
 
-  # header routes
-  get 'home', to: 'pages#home'
-
-
-  get 'about', to: 'pages#about'
-  get 'experience', to: 'experiences#index'
-  get 'projects', to: 'projects#index'
-
-  get 'contact', to: 'pages#contact'
   post 'contact', to: 'messages#create'
 
   get 'resume' => redirect("http://boshencui.com/resume.pdf")

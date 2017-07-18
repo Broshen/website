@@ -12,10 +12,6 @@ dark-blue: #008798
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
-
 section {
   overflow: auto;
 }
@@ -44,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  font-family: 'Open Sans';
+  font-family: "Raleway", sans-serif;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -52,7 +48,7 @@ h1 {
 
 h2 {
   font-size: 2em;
-  font-family: 'Open Sans';
+  font-family: "Raleway", sans-serif;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -61,7 +57,7 @@ h2 {
 
 h3 {
   font-size: 1.7em;
-  font-family: 'Open Sans';
+  font-family: "Raleway", sans-serif;
   text-align: center;
   font-weight: normal;
 }
@@ -79,7 +75,7 @@ header{
 }
 
 #logo {
-  font-family: 'Open Sans';
+  font-family: "Raleway", sans-serif;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -101,13 +97,13 @@ header{
 textarea{
   width: 90vw;
   height: 25vh;
-  resize: both !important;
+  resize: both;
 }
 
 .field > textarea{
   width: 80vw;
   height: 100vh;
-  resize: both !important;
+  resize: both;
 }
 
 .container, .container-fluid{
@@ -121,19 +117,4 @@ textarea{
   height: 50px; /*same height as header*/
   margin-top: -50px; /*same height as header*/
   visibility: hidden;
-}
-
-.project-thumbnail img{
-  max-height: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.job-thumbnail img{
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

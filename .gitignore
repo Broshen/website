@@ -19,6 +19,9 @@
 # Ignore puma config
 /config/puma.rb
 
+# Ignore database config
+/config/database.yml
+
 
 # Ignore application configuration
 /config/application.yml

@@ -1,17 +1,6 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
   before_action :is_admin, only: [:index, :show, :new, :edit, :create, :update, :destroy]
-  # GET /skills
-  # GET /skills.json
-  def index
-    @skills = Skill.all
-  end
-
-  # GET /skills/1
-  # GET /skills/1.json
-  def show
-  end
-
 
   # GET /skills/new
   def new
@@ -29,7 +18,7 @@ class SkillsController < ApplicationController
 
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to @skill, notice: 'Skill was successfully created.' }
+        format.html { redirect_to '/', notice: 'Skill was successfully created.' }
         format.json { render :show, status: :created, location: @skill }
       else
         format.html { render :new }
@@ -43,7 +32,7 @@ class SkillsController < ApplicationController
   def update
     respond_to do |format|
       if @skill.update(skill_params)
-        format.html { redirect_to @skill, notice: 'Skill was successfully updated.' }
+        format.html { redirect_to '/', notice: 'Skill was successfully updated.' }
         format.json { render :show, status: :ok, location: @skill }
       else
         format.html { render :edit }
@@ -57,7 +46,7 @@ class SkillsController < ApplicationController
   def destroy
     @skill.destroy
     respond_to do |format|
-      format.html { redirect_to skills_url, notice: 'Skill was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'Skill was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

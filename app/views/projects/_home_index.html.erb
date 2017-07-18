@@ -1,10 +1,10 @@
 <br>
-<% @projects.order(:created_at).reverse_order.each do |project| %>
-  
-	<%= render :partial=>'projects/show_short', :object=>project %>
-   
-<% end %>
+<div class="flex-container">
+	<% @projects.order(:created_at).reverse_order.each do |project| %>
+		<%= render :partial=>'projects/show_short', :object=>project %>
+	<% end %>
 
-<% if is_admin? %>
-<%= link_to 'New Project', new_project_path %>
-<% end %>
+	<% if is_admin? %>
+	<%= link_to 'New Project', new_project_path %>
+	<% end %>
+</div>

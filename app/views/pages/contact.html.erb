@@ -1,24 +1,32 @@
-<% if current_page?('/contact') %>
-	<h1>Contact </h1>
-<% else %>
-	<h2>Contact </h2>
-<%end%>
-<div class="row">
-<div class="col col-sm-2"></div>
-<div class="col col-sm-8">
-	<%= render template: 'messages/new' %>
+<h2>Contact </h2>
+<div class="row contact">
+	<div class="col col-sm-2"></div>
+	<div class="col col-sm-8">
+		<%= render template: 'messages/new' %>
+	</div>
+	<div class="col col-sm-2"></div>
 </div>
-<div class="col col-sm-2"></div>
-</div>
-<div class="center">
-	<br>
-
-	<a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/boshencui" target="_blank"></a>
-
-	<a class="fa fa-github" href="https://github.com/Broshen" target="_blank"></a>
-
-	<a class="fa fa-envelope" href="mailto:boshen.cui@gmail.com"></a>
-
+<div class="flex-container">
+	<div class="flex-item link">Github
+		<br>
+		<a class="fa fa-github" href="https://github.com/broshen" target="_blank"></a>
+	</div>
+	<div class="flex-item link">LinkedIn
+		<br>
+		<a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/boshencui" target="_blank"></a>
+	</div>
+	<div class="flex-item link">Resume
+		<br>
+		<a class="fa fa-file-text" href="http://boshencui.com/resume.pdf" target="_blank"></a>
+	</div>
+	<div class="flex-item link">Designs
+		<br>
+		<a class="fa fa-globe" aria-hidden="true" href="http://broshen.github.io" target="_blank"></a>
+	</div>
+	<div class="flex-item link">Email
+		<br>
+		<a class="fa fa-envelope" href="mailto:boshen.cui@gmail.com" target="_blank"></a>
+	</div>
 </div>
 <br>
 <br>

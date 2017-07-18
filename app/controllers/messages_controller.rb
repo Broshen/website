@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
       redirect_to "/", notice: "Your messages has been sent."
     else
       flash[:alert] = "An error occurred while delivering this message."
-      render :new
+      redirect_to "/"
     end
   end
 

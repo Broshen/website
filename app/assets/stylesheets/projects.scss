@@ -1,3 +1,184 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.project{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0px !important;
+	width: calc(100% - 20px);
+}
+
+.project-body{
+	position: relative;
+}
+
+.project-title{
+	text-align: center;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 0 15px;
+    position: absolute;
+}
+
+
+.project-title *{
+	font-weight: 300;
+}
+
+.project-thumbnail{
+	height: 300px;
+}
+
+.project-thumbnail img{
+	object-fit: cover;
+	display: block;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+    left: 50%;
+}
+
+
+.project-desc{
+	padding: 20px;
+}
+
+.project-desc-content{
+    height: 54px;
+    overflow: hidden;
+	position: relative;
+}
+
+.project-desc-content:after{
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0), #fff);
+    background: -moz-linear-gradient(left, rgba(255,255,255,0), #fff);
+    background: -o-linear-gradient(left, rgba(255,255,255,0), #fff);
+    background: linear-gradient(left, rgba(255,255,255,0),#ffffff);
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 18px;
+    width: 100px;
+    max-height: 100%;
+}
+
+@media (min-width: 768px){
+	.project{
+		width: calc(50% - 20px);
+	}
+}
+
+.modal.in{
+	width: 100vw;
+    padding: 0 !important;
+}
+
+.modal-dialog{
+	width: 90%;
+	height: 90%;
+}
+
+.modal-title{
+    position: absolute;
+    z-index: 10;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    display: inline;
+    padding: 10px 25px;
+}
+
+.modal button.close{
+	padding: 10px 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.7;
+    z-index: 10;
+    font-family: Raleway, sans-serif;
+    color: white;
+    background: black;
+}
+.modal button.close:hover, .modal button.close:hover{
+	opacity: 1;
+}
+
+.modal-gallery-wrapper{
+    position: relative;
+    height: 50%;
+    background: black;
+}
+
+.modal-desc{
+    height: 50%;
+    padding-top: 20px;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+
+
+@media (min-width: 768px) {
+	.modal-gallery-wrapper{
+	    height: 100%;
+	}
+
+	.modal-desc{
+	    height: calc(100% - 40px);
+	    padding-top: 0;
+	}
+
+	.modal button.close{
+		color: black;
+        background: rgba(255, 255, 255, 0.7);
+	}
+
+	.modal-gallery .carousel-caption{
+	    padding-bottom: 10%;
+	    background: rgba(0,0,0,0.7);
+	    left: 0;
+	    width: 100%;
+	}
+}
+
+.modal-gallery, .modal-gallery > .carousel, .modal-gallery .carousel-inner, .modal-gallery .item{
+	width: 100%;
+	height: 100%;
+}
+
+.modal-gallery .carousel-inner .item > *:first-child{
+	position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    left: 50%;
+    max-width: 80%;
+    max-height: 100%;
+}
+
+.modal-content{
+	border-radius: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.modal-desc-content{
+	padding-bottom: 5px;
+}
+
+.modal-footer{
+	text-align: left;
+	padding: 0;
+	padding-top: 5px;
+}
